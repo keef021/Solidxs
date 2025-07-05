@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Tools - Solid</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="discord-tools.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="../index.html" class="logo">Solid</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#tools">Ferramentas</a></li>
+                <li><a href="#docs">Documentação</a></li>
+                <li><a href="#community">Comunidade</a></li>
+            </ul>
+            <button class="mobile-menu" onclick="toggleMobileMenu()">☰</button>
+        </nav>
+    </header>
+
+    <section class="tools-hero">
+        <div class="container">
+            <h1>Discord Tools</h1>
+            <p>Ferramentas completas para desenvolvimento Discord</p>
+        </div>
+    </section>
+
+    <section class="tools-section" id="tools">
+        <div class="container">
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3>🔗 Webhook Sender</h3>
+                    <input type="url" id="webhookUrl" placeholder="URL do Webhook" class="tool-input">
+                    <textarea id="webhookMessage" placeholder="Mensagem" class="tool-textarea"></textarea>
+                    <input type="text" id="webhookUsername" placeholder="Nome do usuário (opcional)" class="tool-input">
+                    <button onclick="sendWebhook()" class="tool-button discord-btn">Enviar Webhook</button>
+                    <div id="webhookResult" class="result-box"></div>
+                </div>
+                
+                <div class="tool-card">
+                    <h3>🎨 Embed Creator</h3>
+                    <input type="text" id="embedTitle" placeholder="Título" class="tool-input">
+                    <textarea id="embedDescription" placeholder="Descrição" class="tool-textarea"></textarea>
+                    <input type="color" id="embedColor" value="#5865f2" class="tool-input">
+                    <input type="url" id="embedImage" placeholder="URL da imagem (opcional)" class="tool-input">
+                    <button onclick="createEmbed()" class="tool-button success-btn">Gerar Embed</button>
+                    <div id="embedResult" class="result-box"></div>
+                </div>
+                
+                <div class="tool-card">
+                    <h3>🔐 Token Info</h3>
+                    <input type="text" id="botToken" placeholder="Token do Bot" class="tool-input">
+                    <div id="tokenInfo" class="result-box">
+                        <p style="color: #ccc; font-size: 0.9rem;">As informações do token aparecerão aqui...</p>
+                    </div>
+                    <button onclick="checkToken()" class="tool-button warning-btn">Verificar Token</button>
+                </div>
+                
+                <div class="tool-card">
+                    <h3>📊 Server Stats</h3>
+                    <input type="text" id="serverId" placeholder="ID do Servidor" class="tool-input">
+                    <div id="serverStats" class="result-box">
+                        <p style="color: #ccc; font-size: 0.9rem;">Estatísticas do servidor aparecerão aqui...</p>
+                    </div>
+                    <button onclick="getServerStats()" class="tool-button primary-btn">Buscar Stats</button>
+                </div>
+
+                <div class="tool-card">
+                    <h3>🔢 Snowflake Decoder</h3>
+                    <input type="text" id="snowflakeId" placeholder="ID Discord (Snowflake)" class="tool-input">
+                    <div id="snowflakeResult" class="result-box">
+                        <p style="color: #ccc; font-size: 0.9rem;">Informações do Snowflake aparecerão aqui...</p>
+                    </div>
+                    <button onclick="decodeSnowflake()" class="tool-button info-btn">Decodificar</button>
+                </div>
+
+                <div class="tool-card">
+                    <h3>🌈 Color Picker</h3>
+                    <input type="color" id="colorPicker" value="#5865f2" class="tool-input">
+                    <input type="text" id="hexColor" placeholder="#5865f2" class="tool-input">
+                    <div id="colorPreview" class="color-preview"></div>
+                    <button onclick="updateColor()" class="tool-button secondary-btn">Aplicar Cor</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Solid. Feito com ❤️ para a comunidade de desenvolvedores.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="discord-tools.js"></script>
+</body>
+</html>
