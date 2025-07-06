@@ -4,7 +4,7 @@
 const API_CONFIG = {
     primary: {
         endpoint: 'https://api.anthropic.com/v1/messages',
-        key: 'YOUR_ANTHROPIC_API_KEY_HERE', // Substitua pela sua chave
+        key: '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', // Substitua pela sua chave
         model: 'claude-3-sonnet-20240229',
         headers: {
             'Content-Type': 'application/json',
